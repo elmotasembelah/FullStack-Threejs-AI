@@ -17,6 +17,6 @@ app.get("/", (req, res) => {
     res.status(200).json({ message: "hello from Dall E" });
 });
 
-const port = process.env.PORT || 3000;
+// const port = process.env.PORT || 3000;
 
-app.listen(port, () => console.log(`server is listening on port ${port}`));
+app.listen(8080, () => console.log(`server is listening on port ${port}`));
