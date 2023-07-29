@@ -88,15 +88,18 @@ const Customizer = () => {
             // call the back end
             setGeneratingImg(true);
 
-            const res = await fetch("http://localhost:3000/api/v1/dalle", {
-                method: "POST",
-                headers: {
-                    "content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    prompt,
-                }),
-            });
+            const res = await fetch(
+                "https://fullstack-threejs-openai.onrender.com/api/v1/dalle",
+                {
+                    method: "POST",
+                    headers: {
+                        "content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        prompt,
+                    }),
+                }
+            );
             // this is our data containing the image
             const data = await res.json();
 
